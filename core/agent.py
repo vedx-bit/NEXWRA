@@ -6,7 +6,7 @@ from dataclasses import dataclass, field
 from typing import Any
 import sys
 import os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, "/mount/src/-agentcrew")
 from utils.llm import call_llm
 from utils.logger import get_logger
 
