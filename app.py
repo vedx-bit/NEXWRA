@@ -7,7 +7,13 @@ import importlib.util
 
 def load_module(name, path):
     spec = importlib.util.spec_from_file_location(name, path)
+    if spec is None:
+        raise ImportError(f"Cannot find module at: {path}")
     mod = importlib.util.module_from_spec(spec)
+    if spec.loader is None:
+        raise ImportError(f"No loader for module at: {path}")
+    import sys
+    sys.modules[name] = mod
     spec.loader.exec_module(mod)
     return mod
 
