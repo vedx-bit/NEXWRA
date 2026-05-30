@@ -43,9 +43,8 @@ import inspect
 import time
 from typing import Any, Callable
 
-from .task import Task
-from ..utils.logger import get_logger
-
+from core.task import Task
+from utils.logger import get_logger
 logger = get_logger(__name__)
 
 # ------------------------------------------------------------------ #

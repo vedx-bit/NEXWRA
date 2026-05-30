@@ -12,7 +12,7 @@ from dataclasses import dataclass, field
 from typing import TYPE_CHECKING, Callable
 
 if TYPE_CHECKING:
-    from .agent import Agent
+   from core.agent import Agent
 
 
 @dataclass

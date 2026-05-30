@@ -18,10 +18,10 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import Any
 
-from .agent import Agent
-from .task import Task
-from ..utils.logger import get_logger
-from ..utils.llm import call_llm
+from core.agent import Agent
+from core.task import Task
+from utils.logger import get_logger
+from utils.llm import call_llm
 
 logger = get_logger(__name__)
 
